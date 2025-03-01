@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #ff6ec4, #7873f5);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .swiper {
+            width: 80%;
+            max-width: 700px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Add a <strong style="color: yellow;">slideshow gallery</strong> to your site</h1>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x400/?boat,sea" alt="Boat"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x400/?nature,water" alt="Nature"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x400/?ocean,sunset" alt="Ocean"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x400/?mountains,lake" alt="Mountains"></div>
+        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+        });
+    </script>
+
+</body>
+</html>
